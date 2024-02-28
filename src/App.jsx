@@ -4,14 +4,14 @@ import viteLogo from '/vite.svg';
 import './App.css';
 //import 'bootstrap/dist/css/bootstrap.min.css';
 //import StrudelRepl from './Strudel/strudel.jsx';
-import MiniRepl from './Strudel/MiniRepl';
+import MiniRepl from './strudel/MiniRepl';
 
 function App() {
   const strudelCode = `
             // @date 23-08-15
             // "golf rolf" @by froos @license CC BY-NC-SA 4.0
-            setcps(1)
             stack(
+            setcps(1)
               s("bd*2, ~ rim*<1!3 2>, hh*4").bank('RolandTR909')
               .off(-1/8, set(speed("1.5").gain(.25)))
               .mask("<0!16 1!64>")
