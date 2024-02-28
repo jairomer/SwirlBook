@@ -35,10 +35,6 @@ function App() {
             ).reset("<x@15 x(5,8)>")
           `
       //<StrudelRepl code={strudelCode} editable={false}/>
-  /*
-    TODO:
-      - Pause and start buttons are not being loaded.
-  */ 
   return (
     <>
       <MiniRepl tune={strudelCode} />
