@@ -8,11 +8,11 @@ SwirlBook is a very simple proof of concept tool to manage your Strudel composit
 
 ## Why did you do this?
 
-I have been playing around with this music generation system after using it in live coding events and have stored away some compositions that I liked, hacked away or made myself that I have found [here](https://github.com/jairomer/strudel).
+I have been playing around with this music generation system after using it in live coding events and have stored away [here](https://github.com/jairomer/strudel) some compositions that I liked, hacked away or made myself.
 
 In order to play these compositions I would have needed to look up for them, copy and paste them, which is kind of cumbersome.
 
-During this time I was also learning about how to make user interfaces using react, so this was an opportunity to get some real experience and solve a small problem for myself.
+During this time I was also learning about how to make web user interfaces using react, so this was an opportunity to get some real experience and solve a small problem for myself.
 I also got to review some concepts in JavaScript and front end development.  
 
 ## How did you do it?
@@ -47,8 +47,8 @@ In order to do this, a BackEnd with a RESTful API and a proper database are prob
 However, I also believe this can be achieved in a simpler way using a monolithic architecture dynamically generating the webpages, in a similar way a Django app typically does.
 
 There are many improvements I can think so far:
-[ ] Add in a sample resolution server to decouple the minirepl from the availability of external sources.
-[ ] Improve the song list navigation with a search bar.
-[ ] Allow different users, right now it is single user.
-[ ] Add unique URLs for the songs in order to make them easier to run and share.
-[ ] Testing
+- [ ] Improve the sample resolution in `prebake.js`.
+- [ ] Improve the song list navigation with a search bar that fuzzy searches.
+- [ ] Allow different users, right now it is single user.
+- [ ] Add unique URLs for the songs in order to make them easier to run and share.
+- [ ] Testing.
