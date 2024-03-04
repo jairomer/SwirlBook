@@ -4,6 +4,8 @@
 
 SwirlBook is a very simple proof of concept tool to manage your Strudel compositions.
 
+You can play around with it [here](https://strudel.synkops.dev/).
+
 ![Swirlbook](./img/swirlbook.png)
 
 ## Why did you do this?
