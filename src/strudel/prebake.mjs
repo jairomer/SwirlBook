@@ -2,6 +2,14 @@ import { Pattern, noteToMidi, valueToMidi } from '@strudel/core';
 import { registerSynthSounds, registerZZFXSounds, samples } from '@strudel/webaudio';
 import { registerSamplesFromDB } from './idbutils.mjs';
 
+/*
+This is where we set the sources for the resolution of sounds to samples 
+in strudel.
+
+This might be a source of unstability in the code base because we need to 
+fetch these samples from remote locations.
+*/
+
 let BASE_URL;
 if (import.meta.env.BASE_URL != "/") {
   BASE_URL = import.meta.env.BASE_URL
@@ -38,7 +46,7 @@ export default async function prebake() {
     // => getting "window is not defined", as soon as "@strudel/soundfonts" is imported statically
     // seems to be a problem with soundfont2
     import('@strudel/soundfonts').then(({ registerSoundfonts }) => registerSoundfonts()),
-    samples(`${baseNoTrailing}/piano.json`, `${baseNoTrailing}/piano/`, { prebake: true }),
+    samples(`${baseNoTrailing}/piano.json`, `https://strudel.tidalcycles.org/piano/`, { prebake: true }),
     // https://github.com/sgossner/VCSL/
     // https://api.github.com/repositories/126427031/contents/
     // LICENSE: CC0 general-purpose
@@ -47,7 +55,7 @@ export default async function prebake() {
       prebake: true,
       tag: 'drum-machines',
     }),
-    samples(`${baseNoTrailing}/EmuSP12.json`, `${baseNoTrailing}/EmuSP12/`, { prebake: true, tag: 'drum-machines' }),
+    samples(`${baseNoTrailing}/EmuSP12.json`, `https://strudel.tidalcycles.org/EmuSP12/`, { prebake: true, tag: 'drum-machines' }),
     samples(
       {
         casio: ['casio/high.wav', 'casio/low.wav', 'casio/noise.wav'],
@@ -123,8 +131,7 @@ export default async function prebake() {
           'space/017_9.wav',
         ],
         numbers: [
-          'numbers/0.wav',
-          'numbers/1.wav',
+          'numbers/0.wav', 'numbers/1.wav',
           'numbers/2.wav',
           'numbers/3.wav',
           'numbers/4.wav',
@@ -134,7 +141,7 @@ export default async function prebake() {
           'numbers/8.wav',
         ],
       },
-      'github:tidalcycles/dirt-samples',
+      'github:tidalcycles/dirt-samples/',
       {
         prebake: true,
       },
