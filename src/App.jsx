@@ -1,7 +1,6 @@
 import { useState, Component } from 'react';
 import './App.css';
 import MiniRepl from './strudel/MiniRepl';
-import { FixedSizeList as List } from "react-window";
 
 const SONG_LIST_INDEX = "https://raw.githubusercontent.com/jairomer/strudel/master/index.json";
 
