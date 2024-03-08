@@ -68,7 +68,7 @@ class StrudelApp extends Component {
     );
   }
 
-  _renderLoading() { return (<><p className="List">Loading...</p></>); }
+  _renderLoading() { return (<><p className="List blink_me">Loading...</p></>); }
 
   render() {
     /*TODO:
@@ -83,6 +83,10 @@ class StrudelApp extends Component {
       this._renderLoading() : this._renderList();
     return (
       <>
+        <div className="Blog">
+          <a className="text-2xl text-stone m-3" href="https://synkops.dev">
+            blog$ <span className="blink_me">▋</span></a>
+        </div>
         <div className="m-10 bg-neutral-800 justify-center items-center ">
           <MiniRepl key={this.state.minireplKey} className="minirepl" tune={this.state.tune} />
         </div>

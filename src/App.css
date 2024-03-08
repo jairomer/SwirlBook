@@ -11,6 +11,7 @@ body {
   border: 1px solid black;
 }
 
+
 html,
 body,
 #root {
@@ -26,6 +27,12 @@ body,
   font-feature-settings: normal;
   font-variation-settings: normal;
   -webkit-tap-highlight-color: transparent;
+}
+
+.Blog {
+  color: #b5be00;
+  text-align: center;
+  font-family:monospace;
 }
 
 .List {
@@ -54,4 +61,14 @@ body,
 
 .ListItemEven {
   background-color: #505050;
+}
+
+.blink_me {
+  animation: blinker 0.5s linear infinite;
+}
+
+@keyframes blinker {
+  50% {
+    opacity: 0;
+  }
 }
