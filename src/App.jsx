@@ -23,6 +23,9 @@ class StrudelApp extends Component {
     songListPromise
       .then((response) => response.json())
       .then((data) => {
+        data.songs.sort((a, b) => {
+          return a.name.localeCompare(b.name);
+        });
         this.setState({
           songList: data,
         });
